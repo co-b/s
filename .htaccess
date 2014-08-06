@@ -1,0 +1,12 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+
+RedirectMatch 301 ^/menus/$ 	http://smyth.companybonline.com/menus/lunch/
+RedirectMatch 301 ^/team/$ 		http://smyth.companybonline.com/team/bradford-shovlin/
+RedirectMatch 301 ^/contact/$ http://smyth.companybonline.com/contact/information/
+</IfModule>

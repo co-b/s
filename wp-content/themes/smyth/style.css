@@ -1,0 +1,887 @@
+/*
+Theme Name: Smyth
+Theme URI: http://underscores.me/
+Author: Company B
+Author URI: http://companybonline.com
+Description: Description
+Version: 1.0-wpcom
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: smyth
+Domain Path: /languages/
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+ Smyth is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
+
+Resetting and rebuilding styles have been helped along thanks to the fine work of
+Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
+along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+and Blueprint http://www.blueprintcss.org/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 - Reset
+2.0 - Typography
+3.0 - Elements
+4.0 - Forms
+5.0 - Navigation
+	5.1 - Links
+	5.2 - Menus
+6.0 - Accessibility
+7.0 - Alignments
+8.0 - Clearings
+9.0 - Widgets
+10.0 - Content
+	10.1 - Posts and pages
+	10.2 - Asides
+	10.3 - Comments
+11.0 - Infinite scroll
+12.0 - Media
+	12.1 - Captions
+	12.2 - Galleries
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+1.0 - Reset
+--------------------------------------------------------------*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	border: 0;
+	font-family: inherit;
+	font-size: 100%;
+	font-style: inherit;
+	font-weight: inherit;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+html {
+	font-size: 62.5%; /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
+	overflow-y: scroll; /* Keeps page centered in all browsers regardless of content height */
+	-webkit-text-size-adjust: 100%; /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
+	-ms-text-size-adjust:     100%; /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
+}
+*,
+*:before,
+*:after { /* apply a natural box layout model to all elements; see http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+	-webkit-box-sizing: border-box; /* Not needed for modern webkit but still used by Blackberry Browser 7.0; see http://caniuse.com/#search=box-sizing */
+	-moz-box-sizing:    border-box; /* Still needed for Firefox 28; see http://caniuse.com/#search=box-sizing */
+	box-sizing:         border-box;
+}
+body {
+	background: #fff; /* Fallback for when there is no custom background color defined. */
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+nav,
+section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+table { /* tables still need 'cellspacing="0"' in the markup */
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	font-weight: normal;
+	text-align: left;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+a:focus {
+	outline: thin dotted;
+}
+a:hover,
+a:active {
+	outline: 0;
+}
+a img {
+	border: 0;
+}
+
+/*--------------------------------------------------------------
+2.0 Typography
+--------------------------------------------------------------*/
+body,
+button,
+input,
+select,
+textarea {
+	color: #404040;
+	font-family: sans-serif;
+	font-size: 16px;
+	font-size: 1.6rem;
+	line-height: 1.5;
+}
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+}
+p {
+	margin-bottom: 1.5em;
+}
+b, strong {
+	font-weight: bold;
+}
+dfn, cite, em, i {
+	font-style: italic;
+}
+blockquote {
+	margin: 0 1.5em;
+}
+address {
+	margin: 0 0 1.5em;
+}
+pre {
+	background: #eee;
+	font-family: "Courier 10 Pitch", Courier, monospace;
+	font-size: 15px;
+	font-size: 1.5rem;
+	line-height: 1.6;
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em;
+}
+code, kbd, tt, var {
+	font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+mark, ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+sup,
+sub {
+	font-size: 75%;
+	height: 0;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+sup {
+	bottom: 1ex;
+}
+sub {
+	top: .5ex;
+}
+small {
+	font-size: 75%;
+}
+big {
+	font-size: 125%;
+}
+
+
+
+
+
+
+* {
+	-webkit-box-sizing:border-box; 
+	-moz-box-sizing:border-box; 
+	box-sizing:border-box;
+	-webkit-font-smoothing:antialiased;
+}
+
+a:visited {color:#333;}
+a:hover {color:#666;}
+
+
+html, body {
+    height: 100%;
+}
+
+body {
+	color:#FFFFFF;
+	background:#FFFFFF url('data:image/gif;base64,R0lGODlhSQDMAYAAAAUFBQQEBCH5BAAAAAAALAAAAABJAMwBAAL/jI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/f8vv8PGCg4SANgeIiYqLjI2Oj4CBkpOUlZaXmJmam5ydnp+QkaKjpKWmp6ipqqusra6voKGys7y0poe4trRNuZ2+u7shssPExcbHyMnKy8zNzs/AwdLT1Nbfh7jZ2tvc3NU+nNWWipc0k+nlOOfo6Tzr5+0w7/bhNPP1+Dqf6tP9kNBcAE4BKBSggmMYgE4RGFuvw5fAgxAUNaEStavIgxo8aNuRw7evwIMqTIkSRLmjyJMqXKlSyzUQxICdwmcTNnVLuJM6fOnTx7+vwJNKjQoUSLGj2KNKnSpUybOn0KNarUqVSrWr2KNavWrVy7ev0KNqzYsWTLmj2LNq3atWzbun0LN67cuXTr2iVlbp87vfL42vOL7x7NmPz6FZaUl/BexX0Z/3UcGPBgw4spt7yMGY/kzJyvbZ4MSSbizqRLmz6NOrXq1axbu34NO7bs2bQD5KyNO7fu3bx7OykAADs=');
+	background-repeat:repeat-x;
+	background-position:top center;
+	font-family:aleoregular; 
+}
+
+body.home {background-color:#000000; background-size:cover !important;}
+
+ul {list-style:none; padding:0; margin:0;}
+ul li a {color:#FFFFFF; text-decoration: none; display:block;}
+ul li a:visited {color:#FFFFFF;}
+ul li a:hover {color:#AAAAAA;}
+
+nav {text-transform: uppercase;}
+
+article {padding:20px 0; position:relative;}
+
+.home article {padding:0 35% 0 0;}
+
+#hours {display:table; width:100%; table-layout:fixed;}
+#hours div {display:table-cell;}
+
+
+h1 {font-family:navigationregular; text-transform: uppercase;}
+
+nav {display:block; width:100%; font-family:navigationregular;}
+nav ul {display:table; width:96%; table-layout:auto; margin:0 auto;}
+nav ul .current_page_item a, nav ul .current-menu-item a, nav ul .current_page_item a:visited, nav ul .current-menu-item a:visited {background:none;}
+nav ul li {display:table-cell; width:20%; height:194px; text-align:center; vertical-align:middle; position:relative;}
+
+
+.inner-wrap {width:100%; max-width:980px; padding:0 20px; margin:0 auto 0; position:relative;}
+
+.smyth-logo img {
+	width:261px; 
+	max-width:261px; 
+	
+	/*
+	margin-left:-36.5px;
+	width:140%;
+	height:100%; 
+	margin-left:-19.5%;
+	*/
+}
+
+.blurb {width:63%; margin-left:37%; position:relative;}
+
+
+
+
+#sub-menu {position:absolute; bottom:0px;}
+#sub-menu li {background:black; margin-bottom:1px;}
+#sub-menu li a {display:block; padding:5px 10px;}
+
+#menu-main .menu-item-21 > a:first-child {display:none !important;}
+
+
+#menu-main {table-layout: auto;}
+
+
+.header-wrap {height:460px; position:relative;}
+
+/*.admin-bar .header-wrap {height:428px;}*/
+
+.menu-download {font-family:navigationregular; padding-top:2px; text-decoration:none; color:black; background-size:contain; display:block; position:absolute; top:0; left:-100px; text-align:center; text-transform:uppercase; font-size:9px; width:75px; height:45px; line-height:1.2em; display:table; background:url('assets/images/smyth-crest.svg') center center no-repeat; color:#333;}
+
+.menu-download span {display:table-cell; vertical-align:middle;}
+
+#sub-menu .current_page_item a, #sub-menu .current-menu-item a, #sub-menu .current_page_item a:visited, #sub-menu .current-menu-item a:visited {
+	color:#000; background:#fff;
+}
+
+
+.phone {
+	z-index:10; 
+	position:absolute; 
+	top:15px; 
+	right:55px; 
+	font-size:14px; 
+	font-family:navigationregular; 
+	color:#fff; 
+	text-decoration: none;
+}
+
+
+
+.menu-items .menu-item {font-size:14px; padding-bottom:8px;}
+.menu-items .menu-item .title {font-family:navigationregular; text-transform:uppercase; font-size:16px;}
+.menu-items .menu-item .price {font-size:15px;}
+
+.post-52 .menu-items {display:table;}
+.post-52 .menu-items .menu-item {
+	display:inline-block; width:33.3%; table-layout: fixed; vertical-align: top;
+	padding:15px 0; padding-top:0;
+}
+
+.post-52 .menu-items .menu-item:nth-child(3n+2) {
+	padding:15px; padding-top:0;
+}
+.post-52 .menu-items .menu-item span,
+.post-52 .menu-items .menu-item em {
+	display:block; font-style:normal;
+}
+.post-52 .menu-items .menu-item em {
+	font-size:12px;
+}
+
+
+
+
+footer {color:#333333; font-family:navigationregular; font-size:12px; text-transform: uppercase;}
+footer a.social {text-indent:100px; overflow:hidden; background:#000000; display:inline-block; width:32px; height:32px; margin-right:6px; vertical-align: middle;}
+footer ul li a, footer ul li a:hover, footer ul li a:visited {color:#333333;}
+footer ul, footer ul li, footer ul li a {display:inline;}
+#footer {margin-left:12px;}
+#footer a:after {content:"  |  ";}
+#footer li:last-child a:after {content:"";}
+footer .table {display:table; width:90%; margin:10px auto 0;}
+footer .table > div:first-child {display:table-cell; text-align:left; width:50%;}
+footer .table > div:last-child {display:table-cell; text-align:right; width:50%;}
+
+footer a, footer a:hover, footer a:visited {color:#333; text-decoration: none;}
+.home footer a, .home footer a:hover, .home footer a:visited {color:#FFFFFF; text-decoration: none;}
+
+.iron-horse-hotel-logo {display:inline-block; background:url('assets/images/iron-horse-hotel-logo-black.svg') center center no-repeat; background-size:contain; width:60px; height:60px; vertical-align:middle; margin-left:15px;}
+
+.social.instagram {background:#010101 url('assets/images/instagram.svg') no-repeat; background-size:contain;}
+.social.twitter {background:#010101 url('assets/images/twitter.svg') no-repeat; background-size:contain;}
+.social.facebook {background:#010101 url('assets/images/facebook.svg') no-repeat; background-size:contain;}
+
+
+.long-divider {width:100%; height:1px; position:relative; background:#010101; margin:30px auto 0; box-shadow: rgba(0,0,0,0.5) 0 0 1px; width: calc(100% - 30px);}
+
+.long-divider:before {
+	content:' ';
+	display:block;
+	width:15px; height:4px;
+	background:#FFFFFF url('assets/images/left-cap-black.svg') no-repeat;
+	background-size:cover;
+	background-position: center left;
+	position:absolute;
+	top:-2px; left:-15px;
+}
+
+.long-divider:after {
+	content:' ';
+	display:block;
+	width:15px; height:4px;
+	background:#FFFFFF url('assets/images/right-cap-black.svg') no-repeat;
+	background-size:cover;
+	background-position: center right;
+	position:absolute;
+	top:-2px; right:-15px;
+}
+
+
+
+
+.short-divider-left {height:1px; position:absolute; top:62px; left:15px; background:#FFFFFF; box-shadow: rgba(255,255,255,0.5) 0 0 1px; width: 35%;}
+
+.short-divider-left:before {
+	content:' ';
+	display:block;
+	width:15px; height:4px;
+	background:transparent url('assets/images/left-cap.svg') no-repeat;
+	background-size:cover;
+	background-position: center left;
+	position:absolute;
+	top:-2px; left:-15px;
+}
+
+
+.short-divider-right {height:1px; position:absolute; top:62px; right:15px; background:#FFFFFF; box-shadow: rgba(255,255,255,0.5) 0 0 1px; width: 35%;}
+
+.short-divider-right:before {
+	content:' ';
+	display:block;
+	width:15px; height:4px;
+	background:transparent url('assets/images/right-cap.svg') no-repeat;
+	background-size:cover;
+	background-position: center right;
+	position:absolute;
+	top:-2px; right:-15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.home footer {color:#FFFFFF;}
+.home footer ul li a, .home footer ul li a:hover, .home footer ul li a:visited {color:#FFFFFF;}
+.home footer a.social {background:#FFFFFF;}
+
+.home .social {background-color:#FFFFFF;}
+.home .social.instagram {background-image:url('assets/images/instagram-white.svg');}
+.home .social.twitter {background-image:url('assets/images/twitter-white.svg');}
+.home .social.facebook {background-image:url('assets/images/facebook-white.svg');}
+
+.home .long-divider {background:#FFFFFF; box-shadow: rgba(255,255,255,0.5) 0 0 1px;} 
+
+.home .iron-horse-hotel-logo {background-image:url('assets/images/iron-horse-hotel-logo.svg');}
+
+.home .long-divider:before {
+	background-image:url('assets/images/left-cap.svg');
+	background-color:transparent;
+}
+.home .long-divider:after {
+	background-image:url('assets/images/right-cap.svg');
+	background-color:transparent;
+}
+
+.category-title {margin-top:30px; display:block; color:#CD1622; text-transform:lowercase;}
+
+nav {position: relative;}
+
+.menu-btn {display:none; position:fixed; top:20px; left:20px; z-index:9999; background:#000000; padding:5px; font-family:navigationregular; text-transform: uppercase; font-weight:bold;}
+
+.sub-menu {margin:0;}
+
+
+button.pretty, input[type="submit"],
+button.pretty:hover, input[type="submit"]:hover {
+	cursor:pointer;
+	background:#010101; border:none; color:#FFFFFF; box-shadow:none; border-radius: 0; font-family:navigationregular;
+text-transform:uppercase; text-shadow:none; padding:10px 20px; font-size:14px;}
+
+button.pretty:hover, input[type="submit"]:hover {
+	color:#AAAAAA;
+}
+
+button.pretty:active, input[type="submit"]:active {
+	color:#888; box-shadow:none;
+}
+
+@media screen and (max-width: 640px) {
+
+	.menu-btn {display:block;}
+
+	.phone {display:none;}
+	.inner-wrap {width:100%;}
+	nav ul {display:block; width:100%;}
+	nav ul li {display:block; width:100%;}
+	#menu-main li {
+		display:none;
+	}
+	#menu-main .menu-item-21 {
+		display:block;
+	}
+	.blurb {background:#000000;}
+
+	.blurb img {width:100%;}
+
+	nav .short-divider-right,
+	nav .short-divider-left {display:none;}
+
+	.smyth-logo {text-align: center; display:block;}
+	.smyth-logo img {display:block; margin:0 auto;}
+	.blurb {width:100%; margin:0; padding:20px;}
+	#sub-menu {
+		position:relative;
+		margin:0;
+	}
+	.header-wrap {height:auto; min-height:460px;}
+
+	.home .header-wrap {background:inherit;}
+
+	.home article {padding:0;}
+
+	.home article h1 {text-align:center;}
+
+	
+
+	.menu-items .menu-item {
+		display:block !important; width:100% !important;
+		padding:0 0 8px !important;
+	}
+	.menu-items .menu-item:nth-child(even) {
+		/*
+		background:rgba(0,0,0,0.05);
+		*/
+	}
+
+	footer .table div {
+		width:100% !important;
+		display:block !important;
+		text-align:center !important;
+		padding-top:15px;
+	}
+	footer .table div:last-child {padding:0;}
+	#footer {
+		display:block;
+		margin:10px 0;
+	}
+	.iron-horse-hotel-logo {margin:10px auto 0; display:block;}
+
+
+	#hours div {
+		display:block; width:100%;
+		text-align: center;
+	}
+
+}	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.pushy{
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    top: 0;
+    z-index: 9999;
+    background: #333332;
+    font-size: 0.9em;
+    font-weight: bold;
+    -webkit-box-shadow: inset -10px 0 6px -9px rgba(0, 0, 0, .7);
+    -moz-box-shadow: inset -10px 0 6px -9px rgba(0, 0, 0, .7);
+    box-shadow: inset -10px 0 6px -9px rgba(0, 0, 0, .7);
+    overflow: auto;
+    -webkit-overflow-scrolling: touch; /* enables momentum scrolling in iOS overflow elements */
+}
+
+.pushy a{
+    display: block;
+    color: #b3b3b1;
+    padding: 15px 30px;
+    border-bottom: 1px solid rgba(255,255,255, .1);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family:navigationregular;
+    font-weight:normal; 
+    text-align:right;
+}
+
+.pushy a:hover{
+    background: #FFF;
+    color: #000;
+}
+
+/* Menu Movement */
+
+.pushy-left{
+    -webkit-transform: translate3d(-200px,0,0);
+    -moz-transform: translate3d(-200px,0,0);
+    -ms-transform: translate3d(-200px,0,0);
+    -o-transform: translate3d(-200px,0,0);
+    transform: translate3d(-200px,0,0);
+}
+
+.pushy-open{
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+.container-push, .push-push{
+    -webkit-transform: translate3d(200px,0,0);
+    -moz-transform: translate3d(200px,0,0);
+    -ms-transform: translate3d(200px,0,0);
+    -o-transform: translate3d(200px,0,0);
+    transform: translate3d(200px,0,0);
+}
+
+/* Menu Transitions */
+
+.pushy, #container, .push{
+    -webkit-transition: -webkit-transform .2s cubic-bezier(.16, .68, .43, .99);
+    -moz-transition: -moz-transform .2s cubic-bezier(.16, .68, .43, .99);
+    -o-transition: -o-transform .2s cubic-bezier(.16, .68, .43, .99);
+    transition: transform .2s cubic-bezier(.16, .68, .43, .99);
+
+}
+
+.site-overlay {display: none;}
+
+.pushy-active .site-overlay{
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 200px;
+    z-index: 9999;
+}
+
+
+.header-wrap {-webkit-user-select:none; -moz-user-select:none; user-select:none;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.pika-single {
+    z-index: 9999;
+    display: block;
+    position: relative;
+    color: #333;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-bottom-color: #bbb;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/*
+clear child float (pika-lendar), using the famous micro clearfix hack
+http://nicolasgallagher.com/micro-clearfix-hack/
+*/
+.pika-single:before,
+.pika-single:after {
+    content: " ";
+    display: table;
+}
+.pika-single:after { clear: both }
+.pika-single { *zoom: 1 }
+
+.pika-single.is-hidden {
+    display: none;
+}
+
+.pika-single.is-bound {
+    position: absolute;
+    box-shadow: 0 5px 15px -5px rgba(0,0,0,.5);
+}
+
+.pika-lendar {
+    float: left;
+    width: 240px;
+    margin: 8px;
+}
+
+.pika-title {
+    position: relative;
+    text-align: center;
+}
+
+.pika-label {
+    display: inline-block;
+    *display: inline;
+    position: relative;
+    z-index: 9999;
+    overflow: hidden;
+    margin: 0;
+    padding: 5px 3px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: bold;
+    background-color: #fff;
+}
+.pika-title select {
+    cursor: pointer;
+    position: absolute;
+    z-index: 9998;
+    margin: 0;
+    left: 0;
+    top: 5px;
+    filter: alpha(opacity=0);
+    opacity: 0;
+}
+
+.pika-prev,
+.pika-next {
+    display: block;
+    cursor: pointer;
+    position: relative;
+    outline: none;
+    border: 0;
+    padding: 0;
+    width: 20px;
+    height: 30px;
+    /* hide text using text-indent trick, using width value (it's enough) */
+    /*text-indent: 20px;*/
+    white-space: nowrap;
+    overflow: hidden;
+    background-color: transparent;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 75% 75%;
+    opacity: .5;
+    color:black;
+    *position: absolute;
+    *top: 0;
+}
+
+.pika-prev:hover,
+.pika-next:hover {
+    opacity: 1;
+}
+
+.pika-prev,
+.is-rtl .pika-next:after {
+    float: left;
+    content: "\25b6";
+    *left: 0;
+}
+
+.pika-next,
+.is-rtl .pika-prev:after {
+    float: right;
+    content: "\25C0";
+    *right: 0;
+}
+
+.pika-prev.is-disabled,
+.pika-next.is-disabled {
+    cursor: default;
+    opacity: .2;
+}
+
+.pika-select {
+    display: inline-block;
+    *display: inline;
+}
+
+.pika-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 0;
+}
+
+.pika-table th,
+.pika-table td {
+    width: 14.285714285714286%;
+    padding: 0;
+}
+
+.pika-table th {
+    color: #999;
+    font-size: 12px;
+    line-height: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.pika-button {
+    cursor: pointer;
+    display: block;
+    outline: none;
+    border: 0;
+    margin: 0;
+    width: 100%;
+    padding: 5px;
+    color: #666;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: right;
+    background: #f5f5f5;
+}
+
+.pika-week {
+    font-size: 11px;
+    color: #999;
+}
+
+.is-today .pika-button {
+    color: #000;
+    font-weight: bold;
+}
+
+.is-selected .pika-button {
+    color: #fff;
+    font-weight: bold;
+    background: #000000;
+    box-shadow: inset 0 1px 3px #178fe5;
+    border-radius: 3px;
+}
+
+.is-disabled .pika-button {
+    pointer-events: none;
+    cursor: default;
+    color: #999;
+    opacity: .3;
+}
+
+.pika-button:hover {
+    background: #DDDDDD !important;
+    box-shadow: none !important;
+    border-radius: 3px !important;
+}
+
+.pushy .sub-menu {
+	background:rgba(0,0,0,0.2);
+}
+.pushy .sub-menu a {
+	font-family:aleoregular;
+	text-transform: capitalize;
+}
+.pushy .menu-item-21 {display:none;}
+
+
+#opentable {margin-top:20px;}
+
+#opentable select {-webkit-appearance:none; border:none; border-bottom:1px solid black; border-radius:0; margin:0 10px 0 0; padding:7px;}
+
+#opentable input {border:none; border-bottom:1px solid black; margin:0 10px 0 0; padding:7px;}
+
+
+
+.blurb #opentable select, .blurb #opentable input {border:1px solid #000; background:transparent; color:#FFF; border:none; border-bottom:1px solid #FFF; cursor:pointer;} 
+
+
+.page-id-119 #menu-main a {color:#333;}
+
+.page-id-119 .short-divider-left,
+.page-id-119 .short-divider-right {background:#000; box-shadow: rgba(0,0,0,0.5) 0 0 1px;}
+.page-id-119 .short-divider-left:before {
+	background-image:url('assets/images/left-cap-black.svg');
+}
+.page-id-119 .short-divider-right:before {
+	background-image:url('assets/images/right-cap-black.svg');
+}
+.page-id-119 .phone {color:#333;}
+
+input#startDate {
+	width:120px;
+}
+
+
+@media screen and (max-width: 640px) {
+	#opentable button.pretty {background:#FFF; color:#000; margin-top:10px;}
+}
+
+

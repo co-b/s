@@ -1,0 +1,11 @@
+.submitbox .codepress-menu-link {
+	margin-top: 9px;
+	margin-right: 3px;
+	border: none;
+}
+.submitbox .codepress-menu-link:hover {
+	text-shadow: none;
+}
+.submitbox .codepress-menu-link.hide {
+	display: none;
+}
